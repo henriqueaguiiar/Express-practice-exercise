@@ -15,7 +15,6 @@ server.get("/home", (request, reply)=>{
     reply.send(message);
 });
 
-
 server.get("/somar", (request, response)=>{
     const num1 = parseFloat(process.env.NUM_1 || "0");
     const num2 = parseFloat(process.env.NUM_2 || "0");
@@ -27,20 +26,6 @@ server.get("/subtrair", (request, response)=>{
     const num1 = parseFloat(process.env.NUM_1 || "0");
     const num2 = parseFloat(process.env.NUM_2 || "0");
     const result = num1 - num2;
-    response.send(`Resultado: ${result.toString()} `);
-});
-
-server.get("/dividir", (request, response)=>{
-    const num1 = parseFloat(process.env.NUM_1 || "0");
-    const num2 = parseFloat(process.env.NUM_2 || "0");
-    const result = num1 / num2;
-    response.send(`Resultado: ${result.toString()} `);
-});
-
-server.get("/multiplicar", (request, response)=>{
-    const num1 = parseFloat(process.env.NUM_1 || "0");
-    const num2 = parseFloat(process.env.NUM_2 || "0");
-    const result = num1 * num2;
     response.send(`Resultado: ${result.toString()} `);
 });
 
